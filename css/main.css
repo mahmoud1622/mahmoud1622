@@ -1,0 +1,16 @@
+body{
+    background: black;
+    color:white;
+}
+.card{
+    background: #333;
+}
+.none{
+    display: none;
+}
+.checked{
+    text-decoration: line-through;
+}
+.block{
+    display: block;
+}

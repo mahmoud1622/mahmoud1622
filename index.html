@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <!--
+        get by ID > One Item
+        get by Class > node list
+        get by Tag name > node list
+        query selector > One Item
+        query selector all > node list 
+    -->
+    <h1 class="text-center text-info">Add Grocery Items</h1>
+
+    <button class="btn btn-primary btn-block w-25 mx-auto" id="btnmodel">Show Modal</button>
+
+    <div class="container col-8 mt-5 ">
+        <div class="card">
+            <div class="card-body">
+                <div id="alltasks"></div>
+                <div class="alert alert-danger" id="notasks">
+                    <h5 class="text-center">No item</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="model" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Grocery Items</h5>
+                    <button type="button" onclick="showmodel()" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="">Grocery Items</label>
+                                    <input type="text" id="taskinput" placeholder="Enter Grocery Item"
+                                        class="form-control">
+
+                                    <div id="invaliddata" class="alert alert-danger none">
+                                        Please Enter Value Data
+                                        <button type="button" class="close" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div id="invaliddata" class="alert alert-danger none">
+                                        please Enter item less than 20 Characters
+                                        <button type="button" class="close" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                </div>
+                                <button class="btn btn-block btn-info " id="addbtn">Add Grocery</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="showmodel()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+
+
+
+</body>
+
+</html>
